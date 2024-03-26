@@ -18,7 +18,7 @@ while ikkeBeregnet:
     while len(sideArray) > 3 and not cInvalid:
         err = True
         while err:
-            #TODO: fix dit lort så den kun accepterer dit valg, når den kan løse resten af trekanten.
+
             print("Skriv alle dine sidelængder med semikolon mellem hver sidelængde.")
             sideArrInput = input("Start med a. hvis du ikke kender en sidelængde så definer den 0.")
 
@@ -63,13 +63,13 @@ while ikkeBeregnet:
     if vinkelType == "vilkårlig":
         result = mathFuncs.beregnVilkårlig(sideArray,vinkelArray)
         if(result!=-1):
-            print("Sider: ")
-            print("Vinkler: ")
+            print(str("Sider: " + "\na: " + str(result[0]) + "\nb: " + str(result[1]) + "\nc: " + str(result[2])))
+            print(str("Vinkler: " + "\nA: " + str(result[3]) + "\nB: " + str(result[4]) + "\nC: " + str(result[5])))
             ikkeBeregnet = False
     elif vinkelType == "retvinklet":
         result = mathFuncs.beregnRetvinklet(sideArray, vinkelArray)
         if (result != -1):
             print(str("Sider: " + "\na: " + str(result[0]) + "\nb: " + str(result[1]) + "\nc: " + str(result[2])))
-            print("Vinkler: ")
+            print(str("Vinkler: " + "\nA: " + str(result[3]) + "\nB: " + str(result[4]) + "\nC: " + str(result[5])))
             ikkeBeregnet = False
 
